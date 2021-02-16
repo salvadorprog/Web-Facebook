@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    background-image: linear-gradient(to left bottom, #ff002c, #e10049, #b8005a, #890061, #57005d, #3c0655, #21084a, #03023e, #070233, #070128, #05011d, #010011);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+#main {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+} 
+.part {
+    width: 40%;
+    height: 100%;
+}
+
+#loginDisplay {
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #07023383;
+    border: 1px solid #e10049;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px;
+    margin-right: 40px;
+    min-width: 300px;
+    margin-top: 13%;
+}
+
+.inputs {
+    width: 97%;
+    height: 30px;
+    margin-top: 10px;
+    background-color: #57005d;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+}
+.inputs::placeholder {
+    color: white;
+    padding: 10px;
+}
+#datainputs {
+    margin-top: 30px;
+}
+.buttom {
+    background-color: #b8005a;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.buttom:hover {
+    background-color: #57005d;
+}
+
+#logopart {
+    padding: 80px;
+}
+.images {
+    position: fixed;
+    width: 30%;
+    height: auto;
+    margin-left: 10%;
+}
+#people {
+    margin-top: 40px;
+}
+#logo {
+    margin-left: -2%;
+    width: 14%;
+    margin-top: 150px;
+}
+
+#textbienvenda {
+    color: #ffe0ea;
+}
+
+#textini {
+    margin-top: 60%;
+}
