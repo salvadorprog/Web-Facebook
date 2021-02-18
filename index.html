@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook - Iniciar sesion</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="img/facebook-logo.png">
 </head>
 <body>
     <div id="main">
-        <div id="logopart" class="part">
+        <div id="logopart">
             <img id="people" class="images" src="img/personas.png">
             <img id="logo" class="images" src="img/facebook-logo.png">
             <div id="textini">
@@ -16,18 +17,22 @@
                 <p id="textbienvenda">Facebook te comunica y te ayuda a compartir momentos con las personas que forman parte de tu vida</p>
             </div>    
         </div>
-        <div id="loginDisplay" class="part">
-            <form method="POST" action="html/bienvenida.html">
-                <div id="text">
-                    <h2 class="linea"><span>Iniciar sesión</span></h2>
-                </div>
-                <div id="datainputs">
-                    <input class="inputs" type="text" placeholder="Número de teléfono o correo electrónico" name="username">
-                    <input class="inputs" type="password" placeholder="Contraseña" name="password"> 
-                </div>  
-                <input class="buttom" type="submit">
-                <button class="buttom" onclick="location.href='html/olvidopassword.html'">¿Olvidó su contraseña?</button>
-            </form>
+        <div id="part">
+            <div id="loginDisplay" class="part">
+                <form method="GET" action="html/bienvenida.html">
+                    <div id="text">
+                        <h2 class="linea"><span>Iniciar sesión</span></h2>
+                    </div>
+                    <div id="datainputs">
+                        <input class="inputs" type="text" placeholder="Número de teléfono o correo electrónico" name="username" required>
+                        <input class="inputs" type="password" placeholder="Contraseña" name="password"> 
+                    </div>  
+                    <div id="buttonsdiv">
+                        <input id="submit" class="buttom" type="submit" value="Enviar">
+                        <a id="forget" class="buttom" href="html/olvidopassword.html">¿Olvidó su contraseña?</a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>

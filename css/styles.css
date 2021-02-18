@@ -4,6 +4,23 @@
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 0.1em 0.1em 0.05em rgb(0, 0, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
+    color: white;
+}
+
+@keyframes anim{
+    0% {
+        margin-left: 10px;
+        } 
+    50% {
+        margin-left: 30px;
+        }
+    100% {
+        margin-left: 10px; 
+        }
 }
 
 html {
@@ -12,60 +29,90 @@ html {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-}
-#main {
-    width: 90%;
-    display: inline-flex;
-} 
-.part {
-    width: 50%;
+    height: 100%;
 }
 
+#main {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+} 
+#part {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+
 #loginDisplay {
-    width: 500px;
-    height: 250px;
+    width: 30em;
+    height: max-content;
     border-radius: 10px;
     background-color: #07023383;
     border: 1px solid #e10049;
-    margin-right: auto;
-    margin-left: auto;
     padding: 30px;
     min-width: 300px;
-    margin-top: 10em;
     box-shadow: 5px 5px 5px black;
 }
 
 .inputs {
-    width: 97%;
+    transition: 0.25s;
+    width: 70%;
     height: 30px;
     margin-top: 10px;
-    background-image: linear-gradient(to right , #e10049, #32005a);
-    border: none;
+    background-color: transparent;
+    border: 2px solid #b8005a;
     padding: 6px;
     border-radius: 5px;
     padding: 10px;
 }
+.inputs:hover {
+    width: 97%;
+    border-color: #2a2aff;
+}
+.inputs:focus {
+    width: 97%;
+    border-color: #2a2aff;
+}
 .inputs::placeholder {
     color: white;
+    text-align: center;
 }
 #datainputs {
     margin-top: 30px;
+    text-align: center;
 }
 .buttom {
-    background-color: #b8005a;
-    border: none;
+    background-color: transparent;
+    border: 1px solid #e10049;
     padding: 10px 25px;
     border-radius: 5px;
-    margin-top: 40px;
-}
+    margin-top: 20px;
+    font-size: 1em;
+    width: 14em;
+    text-align: center;
+    vertical-align: middle;
+    }
 
 .buttom:hover {
-    background-color: #57005d;
+    background-color: #e10049;
+    transition: 0.50s;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+.buttom:focus {
+    transition: 0.50s;
+    background-color: #e10049;
 }
 
 #logopart {
+    width: 80%;
     padding: 80px;
     min-width: 400px;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
 }
 
 .images {
@@ -75,12 +122,17 @@ html {
 }
 
 #logo {
+    position:static;
     margin-left: -2%;
     width: 25%;
-    margin-top: -400px;    
+    margin-top: -4em;   
+    animation-name: anim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 #textbienvenda {
+    letter-spacing: 2px;
     color: #ffe0ea;
 }
 
@@ -116,14 +168,98 @@ h2.linea:before {
       margin-top: 3em;
   } 
   #buttomca {
-      background-color: #ff002c;
+      transition: 0.25s;
+      background-color: transparent;
       text-align: center;
       width: 50%;
       margin-top: 1em;
   }
   #buttomca:hover {
-      background-color: #ff2f52;
+      background-color: #ff002c;
   }
   #buttomscp {
       text-align: center;
   }
+  nav {
+      background-color: #57005d48;
+      height: 50px;
+  }
+  li img {
+      width: 3em;
+      margin-left: 5px;
+      padding: 1px;
+  }
+  #closedsesion {
+      padding: auto;
+      float: right;
+  }
+  body nav ul {
+      display: block;
+  }
+  body {
+      height: 100%;
+  }
+  #closedsesion {
+      transition: 0.25s;
+      margin-top: -54px;
+      padding: 16px;
+      width: 140px;
+      border: none;
+      background-color: transparent;
+      backdrop-filter: blur(0.9em);
+  }
+  #closedsesion:hover {
+      transition: 0.25s;
+      background-color: #ff0000;
+      box-shadow: 0 0 15px rgb(0, 0, 0);
+  }
+  #userimage {
+      width: 50%;
+      max-width: 360px;
+      padding: 10px;
+  }
+  #bienvenidatab{
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+  }
+  a {
+      text-decoration: none;
+  }
+  #buttonsdiv {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+  }
+  #forget {
+      margin-left: 10px;
+  }
+  #forgetDisplay{
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #07023383;
+    border: 1px solid #e10049;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px;
+    min-width: 300px;
+    margin-top: 10em;
+    box-shadow: 5px 5px 5px black;
+  }
+  @media only screen and (max-width: 1000px) {
+    #main {
+        display: block;
+        min-width: 600px;
+    }
+    #loginDisplay {
+        margin-bottom: 5em;
+    }
+    #bienvenidatab{
+        display: inline-block;
+        text-align: center;
+    }
+}

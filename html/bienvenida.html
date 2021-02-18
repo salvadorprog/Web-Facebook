@@ -5,16 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook - Iniciar sesion</title>
     <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="../img/facebook-logo.png">
 </head>
 <body>
-    <div id="loginDisplay" class="part">
-        <img id="correoimage" src="../img/correo.png">
-        <h2>Recuperar contraseña</h2>
-        <p id="textdown">Puede abrir su correo pulsando en abrir correo o volver atrás pulsando en cancelar</p>
-        <div id="buttomscp">
-            <button id="buttomop" class="buttom" onclick="location.href='mailto:'">Abrir correo</button>
-            <button id="buttomca" class="buttom" onclick="location.href='../index.html'">Cancelar</button>
-        </div>
+    <nav>
+        <ul>
+            <li><img src="../img/facebook-logo.png"></li>
+            <li><button onclick="location.href='../index.html'" id="closedsesion">Cerrar sesión</button></li>
+        </ul>
+    </nav>
+    <div id="bienvenidatab">
+        <img id="userimage" src="../img/usuario.png">
+        <h1 id="title">
+            <script type="text/javascript">
+                function getVars(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+                
+                var username = getVars('username');
+                document.write("Bienvenido " + username)
+            </script>
+            </h1>
     </div>
 </body>
 </html>
